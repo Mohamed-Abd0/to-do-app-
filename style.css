@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header */
+.container{
+    margin: 30px auto 0;
+    background-color: #F6F6F6;
+    width: 600px;
+}
+
+.container .add-task {
+    position: relative;
+    padding: 15px;
+    background-color: #009688;
+    overflow: visible;
+    
+    
+}
+
+.container .add-task input{
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    background-color:#e2d4d485;
+    color: #fff;
+    font: 20px;
+    width: calc(100% - 20px);
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.container .add-task input:focus{
+    outline: none;
+}
+.container .add-task .plus{
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    right: 15px;
+    color: #009688;
+    text-align: center;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    transition: transform .3s;
+}
+.container .add-task .plus:hover{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/* content */
+.container .tasks-content {
+    padding: 15px;
+}
+.container .tasks-content .no-tasks {
+    color: #777;
+    font-size: 15px;
+}
+
+.container .tasks-content > span {
+    display: block;
+    background-color: #FFF;
+    padding: 10px;
+}
+.container .tasks-content >span:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.container .tasks-content .task-box .delet{
+    float: right;
+    background-color: #E91E63;
+    padding: 4px 10px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container .tasks-content .task-box .finshed {
+    text-decoration: line-through;
+}
+
+/* stats bar */
+.container .tasks-stats{
+    /* overflow: hidden; */
+    width: 600px;
+    margin: 10px auto;
+    font-size: 12px;
+}
+
+.tasks-stats .number {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+.tasks-stats .completed {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    text-align: right;
+}
+.tasks-stats span {
+    color: #FFF;
+    padding: 1px 5px;
+    font-size: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.tasks-stats .number span{
+    background-color: #E91E63;
+}
+.tasks-stats .completed span {
+    background-color: #03f453;
+}
+
+/* add through line on the task when checked */
+.checkbox:checked + .task{
+    text-decoration: line-through;
+}
